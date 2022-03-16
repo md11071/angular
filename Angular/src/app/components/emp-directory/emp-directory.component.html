@@ -1,0 +1,52 @@
+<div class="main">
+<div id="emp_dir">
+    <h1>Employee Directory</h1>
+    <app-button text = "Add Employee" (btnclick)="addEmp()"></app-button>
+</div>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Name</th>
+        <th scope="col">Team</th>
+        <th scope="col">Designation</th>
+        <th scope="col">Gender</th>
+        <th scope="col">Joining Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>Employee1</td>
+        <td>Product Testing Team</td>
+        <td>Tester</td>
+        <td>Male</td>
+        <td>13/02/2019</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Employee3</td>
+        <td>Product Development Team</td>
+        <td>Developer</td>
+        <td>Female</td>
+        <td>25/07/2018</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Employee3</td>
+        <td>Product Designing Team</td>
+        <td>Designer</td>
+        <td>Female</td>
+        <td>17/09/2020</td>
+      </tr>
+      <tr *ngIf ="detail_stat"> 
+        <td>{{ detail.id }}</td>
+        <td>{{ detail.name }}</td>
+        <td>{{ detail.team }}</td>
+        <td>{{ detail.desig }}</td>
+        <td>{{ detail.gender }}</td>
+        <td>{{ detail.join_date | date:'dd/MM/yyyy' }}</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
